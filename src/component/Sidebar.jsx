@@ -23,22 +23,27 @@ function Sidebar() {
     { name: "Table", icon: "📑" },
   ];
 
+  const logOutMenu = [
+    { name: "Settings", icon: "📊" },
+    { name: "Log Out", icon: "📦" },
+  ];
+
   return (
     <aside className="row-span-2 flex flex-col gap-2 overflow-y-auto">
       <div
         id="logo"
-        className="h-[10vh] w-32 self-center text-2xl place-content-center font-bold"
+        className="h-[64px] w-32 self-center text-2xl place-content-center font-bold"
       >
         <span className="text-primary">Dash</span>
         <span className="text-black">Stack</span>
       </div>
-      <section className="h-[90vh]">
-        <ul className="space-y-2 flex flex-col h-[30vh]">
+      <section className="h-screen flex flex-col gap-3">
+        <ul className="space-y-2 flex flex-col h-[35%]">
           {menu.map((item) => (
             <li
               key={item.name}
               onClick={() => setActiveItem(item.name)}
-              className={`relative flex gap-6 w-full h-full`}
+              className={`flex gap-6 w-full h-full`}
             >
               {/* Left primary strip (visible only when active) */}
               <span
@@ -62,13 +67,16 @@ function Sidebar() {
             </li>
           ))}
         </ul>
-        <hr />
-        <ul className="space-y-2 flex flex-col h-[40vh]">
+        <hr className="bg-gray-50" />
+        <div className="uppercase text-gray-400 self-center font-secondary text-sm">
+          pages
+        </div>
+        <ul className="space-y-2 flex flex-col h-[45%]">
           {pageMenu.map((item) => (
             <li
               key={item.name}
               onClick={() => setActiveItem(item.name)}
-              className={`relative flex gap-6 w-full h-full`}
+              className={`flex gap-6 w-full h-full`}
             >
               {/* Left primary strip (visible only when active) */}
               <span
@@ -92,7 +100,36 @@ function Sidebar() {
             </li>
           ))}
         </ul>
-        <hr />
+        <hr className="bg-gray-50" />
+        <ul className="space-y-2 flex flex-col h-[10%]">
+          {logOutMenu.map((item) => (
+            <li
+              key={item.name}
+              onClick={() => setActiveItem(item.name)}
+              className={`flex gap-6 w-full h-full`}
+            >
+              {/* Left primary strip (visible only when active) */}
+              <span
+                className={`w-2 rounded-r ${
+                  activeItem === item.name ? "bg-[#407BFF]!" : "bg-transparent"
+                }`}
+              ></span>
+
+              <div
+                className={`flex justify-center gap-5 items-center-safe rounded-lg w-[75%] 
+                  ${
+                    activeItem === item.name
+                      ? "bg-[#407BFF]! text-white"
+                      : "bg-transparent"
+                  }
+                  `}
+              >
+                <span className="text-lg">{item.icon}</span>
+                <span className="text-sm font-medium">{item.name}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
       </section>
     </aside>
   );
