@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+      <h1 className="font-primary text-primary">asdf jas hfkjas fasd</h1>
       <div>
         <h1 class="text-3xl font-bold outline-dotted">Hello world!</h1>
         <a href="https://vite.dev" target="_blank">
@@ -18,8 +19,8 @@ function App() {
         </a>
       </div>
       <a href="#" class="group rounded-lg p-8">
-  <span class="group-hover:underline">Read more…</span>
-</a>
+        <span class="group-hover:underline">Read more…</span>
+      </a>
       <h1>Vite + React</h1>
       <button class="text-white px-4 sm:px-8 py-2 sm:py-3 bg-sky-700 hover:bg-sky-800">
         Submit
