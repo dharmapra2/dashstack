@@ -50,6 +50,7 @@ function Navbar() {
             src="https://flagcdn.com/in.svg"
             alt="IN"
             className="w-7 h-5 object-cover"
+            loading="lazy"
           />
           <p className="text-md font-medium text-gray-700">English</p>
           <FontAwesomeIcon
@@ -64,6 +65,7 @@ function Navbar() {
             src="https://i.pravatar.cc/40?img=3"
             alt="avatar"
             className="w-10 h-10 rounded-full object-cover"
+            loading="lazy"
           />
           <div className="flex flex-col leading-tight">
             <span className="text-sm font-semibold text-gray-800">

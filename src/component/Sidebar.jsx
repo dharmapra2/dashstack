@@ -39,7 +39,7 @@ function Sidebar() {
         <span className="text-black">Stack</span>
       </div>
       <section className="h-screen flex flex-col gap-3 w-full">
-        <ul className="space-y-2 flex flex-col h-[35%] border-b-2 border-gray-400">
+        <ul className="space-y-2 flex flex-col h-[35%] border-b-2 border-gray-400 pb-2">
           {menu.map((item) => (
             <li
               key={item.name}
@@ -48,7 +48,7 @@ function Sidebar() {
             >
               {/* Left primary strip (visible only when active) */}
               <span
-                className={`w-2 rounded-r ${
+                className={`w-1 rounded-r ${
                   activeItem === item.name ? "bg-[#407BFF]!" : "bg-transparent"
                 }`}
               ></span>
@@ -80,7 +80,7 @@ function Sidebar() {
             >
               {/* Left primary strip (visible only when active) */}
               <span
-                className={`w-2 rounded-r ${
+                className={`w-1 rounded-r ${
                   activeItem === item.name ? "bg-[#407BFF]!" : "bg-transparent"
                 }`}
               ></span>
@@ -111,7 +111,7 @@ function Sidebar() {
             >
               {/* Left primary strip (visible only when active) */}
               <span
-                className={`w-2 rounded-r ${
+                className={`w-1 rounded-r ${
                   activeItem === item.name ? "bg-[#407BFF]!" : "bg-transparent"
                 }`}
               ></span>
